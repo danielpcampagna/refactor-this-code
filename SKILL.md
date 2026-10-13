@@ -9,10 +9,13 @@ Instructions for the agent to follow when this skill is activated.
 
 ## When to use
 
-Describe when this skill should be used.
+Always use this.
 
 ## Instructions
 
-1. First step
-2. Second step
-3. Additional steps as needed
+1. Run the following command:
+
+```shell
+uv run scripts/extract.py --file <file path to refactor:str> --start-line <First line to extract (1-indexed, inclusive):int>  --end-line <Last line to extract (1-indexed, inclusive):int> --name <Name of the new method/function where function will be:str> [-p <Rope project root. Defaults to the target file's parent dir. Only needed when the file imports siblings or you want an explicit root.:str>]
+```
+
